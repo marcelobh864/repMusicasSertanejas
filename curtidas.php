@@ -26,6 +26,8 @@
 
 	#topo{
 		position: fixed;
+		top: 0px;
+		z-index: 3;
 		background-color: #000000; 
 		width: 100%;
 		height: 110px;
@@ -69,6 +71,10 @@
    		margin-right: 10px; 
 	}
 
+	textarea.coment{
+		margin-top: 5px;
+	}
+
 	#idcoment{
 		position:absolute;
    		top: 400px;
@@ -93,18 +99,23 @@
    		margin-right: 10px; 
 	}
 
+	p.Ncomentario{
+		margin-top: 5px;
+	}
+
 	#comentarios{
-		top: 5px;
-		margin-top: 20px;
+		top: 105px;
 		position: relative;
 		width: 270px;
 		left: 37px; 
+		z-index: 2
 	}
 
 	#principal{
 		top: 230px;
 		left: -2px;
 		position: relative;
+		z-index: 1;
 		
 	}
 
@@ -228,12 +239,12 @@
 						<div id="principal">
 							<div id="comentarios">
 								 <?php 
-								 echo "<p >Comentario do : ". $row["NomeUsuario"]."</p>";
+								 echo "<p class='Ncomentario'>Comentario do : ". $row["NomeUsuario"]."</p>";
 								 echo "<textarea class='coment' cols=34 rows=4 >". $row["Comentario"]."</textarea><br>";?>
 							 </div>
 						</div><?php
 				}
 			?>
-		
+		</div>
 </body>
 </html>
